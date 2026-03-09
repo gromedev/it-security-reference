@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CANARY_ZEBRA_9F3K - Azure Identity Protection Configuration</title>
+    <meta name="description" content="Guide to configuring Azure Identity Protection risk policies.">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+        h1 { color: #0078d4; }
+        h2 { color: #106ebe; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #0078d4; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Azure Identity Protection Configuration</h1>
+    <p>Configure risk-based policies to protect user identities in your Entra ID tenant.</p>
+
+    <h2>User Risk Policy</h2>
+    <table>
+        <tr><th>Setting</th><th>Recommended Value</th></tr>
+        <tr><td>User risk level</td><td>Medium and above</td></tr>
+        <tr><td>Action</td><td>Require password change</td></tr>
+        <tr><td>MFA requirement</td><td>Required for password change</td></tr>
+    </table>
+
+    <h2>Sign-in Risk Policy</h2>
+    <table>
+        <tr><th>Setting</th><th>Recommended Value</th></tr>
+        <tr><td>Sign-in risk level</td><td>Medium and above</td></tr>
+        <tr><td>Action</td><td>Require MFA</td></tr>
+        <tr><td>Scope</td><td>All users (exclude break-glass)</td></tr>
+    </table>
+
+    <h2>Risk Detection Types</h2>
+    <table>
+        <tr><th>Detection</th><th>Risk Level</th><th>Type</th></tr>
+        <tr><td>Leaked credentials</td><td>High</td><td>Offline</td></tr>
+        <tr><td>Anonymous IP address</td><td>Medium</td><td>Real-time</td></tr>
+        <tr><td>Atypical travel</td><td>Medium</td><td>Offline</td></tr>
+        <tr><td>Unfamiliar sign-in</td><td>Medium</td><td>Real-time</td></tr>
+        <tr><td>Password spray</td><td>High</td><td>Offline</td></tr>
+    </table>
+
+    <footer>
+        <p>Last updated: March 2026. Reference: Microsoft Identity Protection documentation.</p>
+    </footer>
+</body>
+</html>
